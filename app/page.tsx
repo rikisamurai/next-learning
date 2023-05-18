@@ -7,6 +7,8 @@ export default function Page() {
       <Link href={"/dashboard"}>Dashboard</Link>
       <br />
       <Link href={"/blog"}>Blog</Link>
+      <br />
+      <Link href={"/intercepting"}>intercepting</Link>
     </>
   );
 }
