@@ -9,6 +9,10 @@ export default function Page() {
       <Link href={"/blog"}>Blog</Link>
       <br />
       <Link href={"/intercepting"}>intercepting</Link>
+      <br />
+      <br />
+      <br />
+      <Link href={"/jotai"}>jotai</Link>
     </>
   );
 }
