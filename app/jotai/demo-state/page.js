@@ -10,7 +10,10 @@ const sceneEnum = {
 // 定义 scene、video、target 和 combo 状态
 const sceneAtom = atom(sceneEnum.target);
 const videoAtom = atom('');
-const targetAtom = atom('');
+const targetAtom = atom('', (_, set) => {
+  set(targetAtom, 'fans');
+  set(videoAtom, 'hot');
+});
 const comboAtom = atom((get) => {
   const video = get(videoAtom);
   const target = get(targetAtom);

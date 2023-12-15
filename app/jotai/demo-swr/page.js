@@ -47,6 +47,7 @@ function MyComponent() {
 
 function User() {
   const { data, isLoading, isValidating } = useUser();
+  console.info('re-render');
 
   if (isLoading) {
     return <div>Loading...</div>;

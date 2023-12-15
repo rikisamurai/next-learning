@@ -13,7 +13,6 @@ const Input = () => {
 
 const CharCount = () => {
   const [len] = useAtom(textLenAtom);
-  console.info(111);
   return <div>Length: {len}</div>;
 };
 
