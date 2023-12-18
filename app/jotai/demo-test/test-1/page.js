@@ -9,31 +9,39 @@ const asyncAtom = atomWithDefault(async () => {
   return 'async';
 });
 const setAsyncAtom = atom(null, (get, set) => {
-  set(asyncAtom, Promise.resolve('update'));
+  set(asyncAtom, Promise.resolve('async update'));
+});
+const setSyncAtom = atom(null, (get, set) => {
+  set(asyncAtom, 'sync update');
 });
 
 const Async = () => {
   const [async] = useAtom(asyncAtom);
-  const setAsync = useSetAtom(setAsyncAtom);
-  console.info('re-render Async');
   React.useEffect(() => {
-    console.info('Async mount');
+    console.info('Async mount', performance.now());
 
     return () => {
-      console.info('Async unmount');
+      console.info('Async unmount', performance.now());
     };
   }, []);
 
   return (
-    <h1 onClick={setAsync}>
+    <h1>
       async: {async} <TestClass /> <TestFunction />
     </h1>
   );
 };
 
 const AsyncWrap = () => {
+  const setAsync = useSetAtom(setAsyncAtom);
+  const setSync = useSetAtom(setSyncAtom);
+
   return (
     <React.Suspense fallback={'loading ...'}>
+      <div>
+        <button onClick={setAsync}>set async</button>
+        <button onClick={setSync}>set sync</button>
+      </div>
       <Async />
     </React.Suspense>
   );
@@ -44,8 +52,8 @@ export default function Page() {
 
   return (
     <section>
-      <h1>test1 {count}</h1>
       <button onClick={() => setCount((c) => c + 1)}>click</button>
+      <h1>test1 {count}</h1>
       <AsyncWrap />
     </section>
   );
