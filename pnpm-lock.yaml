@@ -1,12 +1,16 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: false
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@react-buddy/ide-toolbox-next':
     specifier: ^2.4.0
     version: 2.4.0(next@13.4.2)(react@18.2.0)
   '@react-buddy/palette-antd':
     specifier: ^5.3.0
-    version: 5.3.0(@ant-design/icons@5.1.0)(antd@5.5.0)(react@18.2.0)
+    version: 5.3.0(antd@5.5.0)(react@18.2.0)
   '@types/node':
     specifier: 20.1.5
     version: 20.1.5
@@ -57,7 +61,7 @@ dependencies:
     version: 3.4.3(mobx@6.9.0)(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.2
-    version: 13.4.2(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+    version: 13.4.2(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.1
     version: 3.3.1
@@ -105,6 +109,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.3.0
     version: 0.3.0(prettier@2.8.8)
+  tilg:
+    specifier: ^0.1.1
+    version: 0.1.1(react@18.2.0)
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.1.5)(typescript@5.0.4)
@@ -721,7 +728,7 @@ packages:
       react: ^17.0.0 || ^18.0.0
     dependencies:
       '@react-buddy/ide-toolbox': 2.3.1(react@18.2.0)
-      next: 13.4.2(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     dev: false
 
@@ -733,14 +740,13 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-buddy/palette-antd@5.3.0(@ant-design/icons@5.1.0)(antd@5.5.0)(react@18.2.0):
+  /@react-buddy/palette-antd@5.3.0(antd@5.5.0)(react@18.2.0):
     resolution: {integrity: sha512-c1B6b1r47JudvMqnl0BWZW9cJg/cSNSSnCoOZTDfZSgEDHUfqp/yRk3BBA0ajo+erXUQ3yR/bQUNt95OU7Lopg==}
     peerDependencies:
       '@ant-design/icons': ^5.0.0
       antd: ^5.3.0
       react: ^17.0.0 || ^18.0.0
     dependencies:
-      '@ant-design/icons': 5.1.0(react-dom@18.2.0)(react@18.2.0)
       '@react-buddy/ide-toolbox': 2.3.1(react@18.2.0)
       antd: 5.5.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
@@ -2435,7 +2441,6 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
 
   /js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -2530,7 +2535,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -2649,7 +2653,7 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next@13.4.2(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.4.2(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-aNFqLs3a3nTGvLWlO9SUhCuMUHVPSFQC0+tDNGAsDXqx+WJDFSbvc233gOJ5H19SBc7nw36A9LwQepOJ2u/8Kg==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -2677,7 +2681,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.21.8)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
       zod: 3.21.4
     optionalDependencies:
       '@next/swc-darwin-arm64': 13.4.2
@@ -3698,7 +3702,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -3931,7 +3934,7 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  /styled-jsx@5.1.1(@babel/core@7.21.8)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -3944,7 +3947,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.8
       client-only: 0.0.1
       react: 18.2.0
     dev: false
@@ -4059,6 +4061,14 @@ packages:
     resolution: {integrity: sha512-2iQTSgkkc1Zyk0MeVrt/3BvuOXYPl/R8Z0U2xxo9rjwNciaHDG3R+Lm6dh4EeUci49DanvBnuqI6jshoQQRGEg==}
     engines: {node: '>=12.22'}
     dev: false
+
+  /tilg@0.1.1(react@18.2.0):
+    resolution: {integrity: sha512-0uHyTAUM0tJL792LeviRPFkJtCbF6Za3/hbbnRmWGUaicOhbJ0IpvBViXiXTF7nk6R0L6vve2XLesQzn5jEVng==}
+    peerDependencies:
+      react: ^18.0.0 || ^17.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
 
   /titleize@3.0.0:
     resolution: {integrity: sha512-KxVu8EYHDPBdUYdKZdKtU2aj2XfEx9AfjXxE/Aj0vT06w2icA09Vus1rh6eSu1y01akYg6BjIK/hxyLJINoMLQ==}
