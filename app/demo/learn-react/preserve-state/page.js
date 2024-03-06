@@ -23,7 +23,6 @@ export default function App() {
   }
   return (
     <div>
-      {/*<div>111</div>*/}
       <Counter isFancy={false} />
       <label>
         <input
