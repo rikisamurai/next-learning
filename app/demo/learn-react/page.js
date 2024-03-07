@@ -1,12 +1,16 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function App() {
+  const [state, dispatch] = useReducer(() => {}, false);
+  console.info('state', state);
+
   return (
     <div>
       <h1>test</h1>
       <TodoList />
+      <button onClick={dispatch}>click me</button>
       {/*<AvatarTwo name={null} size={'medium'} />*/}
     </div>
   );
