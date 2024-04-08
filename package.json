@@ -27,7 +27,7 @@
     "mobx": "^6.9.0",
     "mobx-react": "^7.6.0",
     "mobx-react-lite": "^3.4.3",
-    "next": "13.4.2",
+    "next": "^14.1.1",
     "node-fetch": "^3.3.1",
     "optics-ts": "^2.4.0",
     "postcss": "8.4.23",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@types/ramda": "^0.29.1",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.34.0",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "tilg": "^0.1.1",
