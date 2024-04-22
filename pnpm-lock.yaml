@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     version: 2.4.0(next@14.1.3)(react@18.2.0)
   '@react-buddy/palette-antd':
     specifier: ^5.3.0
-    version: 5.3.0(antd@5.5.0)(react@18.2.0)
+    version: 5.3.0(@ant-design/icons@5.1.0)(antd@5.5.0)(react@18.2.0)
   '@types/node':
     specifier: 20.1.5
     version: 20.1.5
@@ -42,14 +42,14 @@ dependencies:
     specifier: ^10.0.2
     version: 10.0.2
   jotai:
-    specifier: ^2.1.0
-    version: 2.1.0(react@18.2.0)
+    specifier: ^2.8.0
+    version: 2.8.0(@types/react@18.2.6)(react@18.2.0)
   jotai-immer:
     specifier: ^0.2.0
-    version: 0.2.0(immer@10.0.2)(jotai@2.1.0)(react@18.2.0)
+    version: 0.2.0(immer@10.0.2)(jotai@2.8.0)(react@18.2.0)
   jotai-optics:
     specifier: ^0.3.0
-    version: 0.3.0(jotai@2.1.0)(optics-ts@2.4.0)
+    version: 0.3.0(jotai@2.8.0)(optics-ts@2.4.0)
   mobx:
     specifier: ^6.9.0
     version: 6.9.0
@@ -61,7 +61,7 @@ dependencies:
     version: 3.4.3(mobx@6.9.0)(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: ^14.1.1
-    version: 14.1.3(react-dom@18.2.0)(react@18.2.0)
+    version: 14.1.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.1
     version: 3.3.1
@@ -734,7 +734,7 @@ packages:
       react: ^17.0.0 || ^18.0.0
     dependencies:
       '@react-buddy/ide-toolbox': 2.3.1(react@18.2.0)
-      next: 14.1.3(react-dom@18.2.0)(react@18.2.0)
+      next: 14.1.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     dev: false
 
@@ -746,13 +746,14 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-buddy/palette-antd@5.3.0(antd@5.5.0)(react@18.2.0):
+  /@react-buddy/palette-antd@5.3.0(@ant-design/icons@5.1.0)(antd@5.5.0)(react@18.2.0):
     resolution: {integrity: sha512-c1B6b1r47JudvMqnl0BWZW9cJg/cSNSSnCoOZTDfZSgEDHUfqp/yRk3BBA0ajo+erXUQ3yR/bQUNt95OU7Lopg==}
     peerDependencies:
       '@ant-design/icons': ^5.0.0
       antd: ^5.3.0
       react: ^17.0.0 || ^18.0.0
     dependencies:
+      '@ant-design/icons': 5.1.0(react-dom@18.2.0)(react@18.2.0)
       '@react-buddy/ide-toolbox': 2.3.1(react@18.2.0)
       antd: 5.5.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
@@ -2667,7 +2668,7 @@ packages:
     hasBin: true
     dev: false
 
-  /jotai-immer@0.2.0(immer@10.0.2)(jotai@2.1.0)(react@18.2.0):
+  /jotai-immer@0.2.0(immer@10.0.2)(jotai@2.8.0)(react@18.2.0):
     resolution: {integrity: sha512-hahK8EPiROS9RoNWmX/Z8rY9WkAijspX4BZ1O7umpcwI4kPNkbcCpu/PhiQ8FMcpEcF6KmbpbMpSSj/GFmo8NA==}
     peerDependencies:
       immer: '*'
@@ -2675,29 +2676,33 @@ packages:
       react: '>=17.0.0'
     dependencies:
       immer: 10.0.2
-      jotai: 2.1.0(react@18.2.0)
+      jotai: 2.8.0(@types/react@18.2.6)(react@18.2.0)
       react: 18.2.0
     dev: false
 
-  /jotai-optics@0.3.0(jotai@2.1.0)(optics-ts@2.4.0):
+  /jotai-optics@0.3.0(jotai@2.8.0)(optics-ts@2.4.0):
     resolution: {integrity: sha512-5ttpCRREIBu6DJix0wlyBP6y1QDPlePnoMZSXNDi/FOkXZrhk9uIXKjwvw34/yBCHT5mYpFUD4sFDvRUU2vkvQ==}
     peerDependencies:
       jotai: '>=1.11.0'
       optics-ts: '*'
     dependencies:
-      jotai: 2.1.0(react@18.2.0)
+      jotai: 2.8.0(@types/react@18.2.6)(react@18.2.0)
       optics-ts: 2.4.0
     dev: false
 
-  /jotai@2.1.0(react@18.2.0):
-    resolution: {integrity: sha512-fR82PtHAmEQrc/daMEYGc4EteW96/b6wodtDSCzLvoJA/6y4YG70er4hh2f8CYwYjqwQ0eZUModGfG4DmwkTyQ==}
+  /jotai@2.8.0(@types/react@18.2.6)(react@18.2.0):
+    resolution: {integrity: sha512-yZNMC36FdLOksOr8qga0yLf14miCJlEThlp5DeFJNnqzm2+ZG7wLcJzoOyij5K6U6Xlc5ljQqPDlJRgqW0Y18g==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
+      '@types/react': '>=17.0.0'
       react: '>=17.0.0'
     peerDependenciesMeta:
+      '@types/react':
+        optional: true
       react:
         optional: true
     dependencies:
+      '@types/react': 18.2.6
       react: 18.2.0
     dev: false
 
@@ -2917,7 +2922,7 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next@14.1.3(react-dom@18.2.0)(react@18.2.0):
+  /next@14.1.3(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-oexgMV2MapI0UIWiXKkixF8J8ORxpy64OuJ/J9oVUmIthXOUCcuVEZX+dtpgq7wIfIqtBwQsKEDXejcjTsan9g==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -2940,7 +2945,7 @@ packages:
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(react@18.2.0)
+      styled-jsx: 5.1.1(@babel/core@7.21.8)(react@18.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.1.3
       '@next/swc-darwin-x64': 14.1.3
@@ -4301,7 +4306,7 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  /styled-jsx@5.1.1(react@18.2.0):
+  /styled-jsx@5.1.1(@babel/core@7.21.8)(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -4314,6 +4319,7 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
+      '@babel/core': 7.21.8
       client-only: 0.0.1
       react: 18.2.0
     dev: false
